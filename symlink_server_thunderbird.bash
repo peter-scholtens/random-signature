@@ -8,7 +8,7 @@ while true; do
 	declare -A AGE_DAYS
 	# For all signature files, find out their age expressed in days.
 	for FILE in "${SIG_FILES[@]}"; do
-		AGE_DAYS[$FILE]=$(( ($EPOCHSECONDS - $( stat -c "%Y" $FILE ))/(3600*24) ))
+		AGE_DAYS[$FILE]=$(( ($EPOCHSECONDS - $( stat -c "%Y" $FILE ))/(3600*24) + 1 ))
 	done
 	# Find highest values of all days.
 	HIGHEST=0
