@@ -32,3 +32,6 @@ In another terminal you can now do:
 ls -l ~/.thunderbird/random_signature_fifo.html
 ```
 You'll see that the filename refers `->` to another randomly chosen file. Re-try the `ls` command after ten seconds and see that it has changed. You can use this to read a different signature for every mail you send.
+
+### Select your random signature generator in Thunderbird
+In Thunderbird you can do that by following the pulldown menu path `Edit` -> `Account Settings` and select the e-mailaddress which you want to attach the generator to. Then **switch on** the checkbox of the option `Attach the signature from a file instead`, and choose the correct path towards the symbolic link.
