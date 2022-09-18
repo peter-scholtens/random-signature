@@ -35,3 +35,8 @@ You'll see that the filename refers `->` to another randomly chosen file. Re-try
 
 ### Select your random signature generator in Thunderbird
 In Thunderbird you can do that by following the pulldown menu path `Edit` -> `Account Settings` and select the e-mailaddress which you want to attach the generator to. Then **switch on** the checkbox of the option `Attach the signature from a file instead`, and choose the correct path towards the symbolic link.
+
+### Start the signature generator automatically
+Above we started the signature generator manually using the commnad `./symlink_server_thunderbird.bash`. For ease-of-use it is convenient to let it start automatically. This can be done as a root process by locating the script in the init deamon directory:`/etc/init.d/`. However, this requires root privileges. Following the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) it is better to start it as a normal user, by using for example `gnome-sessions-properties`, which can be found by looking for *startup application preferences*.
+![Set a name, command and optiobally a comment to automatically start your signature server.](gnome_session_properties.png "Example settings to automatically start the signature generator with gnome-sessions-properties")
+
